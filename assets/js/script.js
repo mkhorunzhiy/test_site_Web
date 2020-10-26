@@ -23,10 +23,10 @@ var slide1 = new Slide(
 
 
 var slide2 = new Slide(
-   "Yahoo",
-   "yahoo not",
-   "https://via.placeholder.com/500x150",
-   "http://yahoo.com"
+   "Nice forest",
+   "forest",
+   "./public/images/les1.jpg",
+   "https://pickimage.ru/wp-content/uploads/images/detskie/forest/les1.jpg"
 );
 
 
