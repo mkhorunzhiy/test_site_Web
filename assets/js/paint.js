@@ -15,22 +15,17 @@ let mouseY;
 
 
 canvas.addEventListener('mousedown',function (e){
-   mouseX = e.pageX - this.offsetLeft;
-   mouseY = e.pageY - this.offsetTop;
-/* версія для нашої розмітки
+  
    mouseX = e.pageX - this.offsetLeft - offsetLeft;
-   mouseY = e.pageY - this.offsetTop - offsetTop; */
+   mouseY = e.pageY - this.offsetTop - offsetTop;
    paint = true;
    addClick(mouseX, mouseY);
    redraw();
 });
 canvas.addEventListener('mousemove',function (e){
    if(paint){
-       addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop, true);
-
-/* версія для нашої розмітки
+      
        addClick(e.pageX - this.offsetLeft - offsetLeft, e.pageY - this.offsetTop - offsetTop, true);
-*/
        redraw();
    }
 });
