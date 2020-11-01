@@ -62,8 +62,16 @@ function redraw(){
        context.stroke();
    }
 }
-function clear() {
-    let canvas = document.getElementById('draw');
-    context = canvas.getContext("2d");
+function canvas_clear() {
+    let canvas = document.getElementById('draw'),
+        context = canvas.getContext("2d");
     context.clearRect(0, 0, canvas.width, canvas.height);
+
 }
+
+
+function setPencil() {
+    let canvas = document.getElementById('draw'),
+        context = canvas.getContext("2d");
+    context.lineWidth = select.value
+  }
