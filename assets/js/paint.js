@@ -62,3 +62,6 @@ function redraw(){
        context.stroke();
    }
 }
+function clear() {
+    context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+}
