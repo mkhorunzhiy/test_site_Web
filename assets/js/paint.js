@@ -34,7 +34,9 @@ canvas.addEventListener('mouseup',function (e){
 });
 canvas.addEventListener('mouseleave',function (e){
    paint = false;
+   clearArrays();
 });
+
 
 function addClick(x, y, dragging)
 {
@@ -44,9 +46,9 @@ function addClick(x, y, dragging)
 }
 
 function redraw(){
-   context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
+  // context.clearRect(0, 0, context.canvas.width, context.canvas.height); // Clears the canvas
 
-   context.strokeStyle = "#df4b26";
+   context.strokeStyle =document.getElementById("myColor").value;
    context.lineJoin = "round";
    context.lineWidth = select.value;
 
@@ -62,14 +64,18 @@ function redraw(){
        context.stroke();
    }
 }
+function clearArrays(){
+    clickX.length = 0;
+    clickY.length = 0;
+    clickDrag.length = 0;
+
+}
+
 function canvas_clear() {
     let canvas = document.getElementById('draw'),
         context = canvas.getContext("2d");
-        clickX.length = 0;
-        clickY.length = 0;
-        clickDrag.length = 0;
     context.clearRect(0, 0, canvas.width, canvas.height);
-
+    clearArrays();
 }
 
 
