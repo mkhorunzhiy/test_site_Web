@@ -48,7 +48,7 @@ function redraw(){
 
    context.strokeStyle = "#df4b26";
    context.lineJoin = "round";
-   context.lineWidth = 5;
+   context.lineWidth = select.value;
 
    for(var i=0; i < clickX.length; i++) {
        context.beginPath();
@@ -65,13 +65,12 @@ function redraw(){
 function canvas_clear() {
     let canvas = document.getElementById('draw'),
         context = canvas.getContext("2d");
+        clickX.length = 0;
+        clickY.length = 0;
+        clickDrag.length = 0;
     context.clearRect(0, 0, canvas.width, canvas.height);
 
 }
 
 
-function setPencil() {
-    let canvas = document.getElementById('draw'),
-        context = canvas.getContext("2d");
-    context.lineWidth = select.value
-  }
+
